@@ -1,0 +1,23 @@
+<div  class="container">
+    <p>
+      <input #query (keyup)="onQuery(query.value)" type="text" class="form-control" placeholder="Search..">
+    </p>
+    <div *ngIf="!movies">No Movies</div>   
+<div class="row">
+    <ng-container *ngFor="let m of movies"  >
+        <div class="col">
+            <div class="card" 
+            style="width: 18rem;">
+                <img class="card-img-top" [src]="m.Poster" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">{{m.Title}}</p>
+                </div>
+              </div>
+        </div>
+       
+    </ng-container> 
+ 
+</div>
+</div>
+
+
